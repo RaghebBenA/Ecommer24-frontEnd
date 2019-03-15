@@ -1,11 +1,14 @@
 import React from "react";
-import { Card, Carousel, Image } from "react-bootstrap";
+import { Card, Carousel, Image ,Container,Row } from "react-bootstrap";
 import Audi from "../asset/ford-63930_640.jpg";
 import CarTwo from "../asset/car-1149997_640.jpg";
 import CarThree from "../asset/car-2596344_640.jpg";
 
 const Home = () => {
   return (
+    <Container>
+    <h1>Ecommerce24</h1>
+    <Row>
     <Card className="bg-dark text-white">
       <Carousel>
         <Carousel.Item>
@@ -38,6 +41,8 @@ const Home = () => {
         <Card.Text>Last updated 3 mins ago</Card.Text>
       </Card.ImgOverlay>
     </Card>
+    </Row>
+    </Container>
   );
 };
 export default Home;

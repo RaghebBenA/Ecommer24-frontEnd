@@ -4,12 +4,12 @@
 
 .cards{
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 100%;
-
 }
+
 
 @keyframes App-logo-spin {
   from {

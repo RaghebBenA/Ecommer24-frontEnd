@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import Head from "./Header";
 import { BaseUrl } from "./baseUrl";
-import { Card, Button } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Table,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./Home";
 
@@ -9,7 +16,7 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
     };
   }
   componentDidMount() {
@@ -18,7 +25,7 @@ class Main extends Component {
       .then((response) => {
         const cards = response.map((card) => {
           return (
-            <Card style={{ width: "18rem" }} key={Card.id}>
+            <Card  style={{ width: "18rem" }} key={Card.id}>
               <Card.Img
                 style={{ height: "150px" }}
                 variant="top"
@@ -39,8 +46,37 @@ class Main extends Component {
   }
   render() {
     const Card = () => {
-      return <div className="cards">{this.state.data}</div>;
+      return (
+        <Container>
+          <Row>
+            <Col md={3}>
+              <Table responsive variant="dark" hover bordered >
+                <thead>
+                  <tr>
+                    <th>Gategory</th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr>
+                    <td>Modern Cars</td>
+                  </tr>
+                  <tr>
+                    <td>Old Cars</td>
+                  </tr>
+                  <tr>
+                    <td>Sport Cars</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Col>
+            <Col md={{ offset: 1 }}>
+              <div className="cards">{this.state.data}</div>
+            </Col>
+          </Row>
+        </Container>
+      );
     };
+
     const Homepage = () => {
       return (
         <div className="container">
@@ -48,7 +84,7 @@ class Main extends Component {
         </div>
       );
     };
-    console.log(this.state.data);
+
     return (
       <React.Fragment>
         <Head />
