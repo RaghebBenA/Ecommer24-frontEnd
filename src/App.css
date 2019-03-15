@@ -2,14 +2,27 @@
   text-align: center;
 }
 
-.cards{
+.cards {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 100%;
 }
-
+.Card:hover{
+  border: #343A40 1px solid
+}
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+.jumbotron {
+  padding: 70px 30px 70px 30px;
+  margin: 0px auto;
+  border: solid 2px white;
+  background-color: #343A40;
+  color: floralwhite;
+}
 
 @keyframes App-logo-spin {
   from {
