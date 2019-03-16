@@ -7,14 +7,14 @@ import {
   Col,
   Card
 } from "react-bootstrap";
-import Audi from "../asset/ford-63930_640.jpg";
-import CarTwo from "../asset/car-1149997_640.jpg";
-import CarThree from "../asset/car-2596344_640.jpg";
+import Audi from "../assets/ford-63930_640.jpg";
+import CarTwo from "../assets/car-1149997_640.jpg";
+import CarThree from "../assets/car-2596344_640.jpg";
 
 const Home = () => {
   return (
     <React.Fragment>
-    <Container className="justify-content center">
+    <Container>
       <Row>
         <Col md={{ offset: 3 }}>
           <Card style={{ width: "30rem" }}>
