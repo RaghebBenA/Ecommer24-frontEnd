@@ -8,6 +8,7 @@ import profileImage from "../../assets/img/faces/avatar.jpg";
 import CustomDropdown from '../components/CustomDropdown.jsx'
 import Header from "./Header";
 import navbarsStyle from "../../assets/jss/material-kit-react/views/componentsSections/navbarsStyle";
+import {NavLink} from 'react-router-dom'
 
 
 class MainHeader extends React.Component{
@@ -21,24 +22,26 @@ class MainHeader extends React.Component{
             rightLinks={
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
+                <NavLink to='/home'>
                   <Button
-                    href="#pablo"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Discover
+                    Home
                   </Button>
+                  </NavLink>
                 </ListItem>
                 <ListItem className={classes.listItem}>
+                <NavLink to='/product'>
                   <Button
-                    href="#pablo"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Wishlist
+                    Product 
                   </Button>
+                  </NavLink>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button

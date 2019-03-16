@@ -11,13 +11,6 @@ class Product extends Component {
     };
     this.handelClickOne = this.handelClickOne.bind(this)
   }
-  handleDrawerOpen = () => {
-    this.setState({ open: true });
-  };
-
-  handleDrawerClose = () => {
-    this.setState({ open: false });
-  };
   handelClickOne(){
    this.setState({product: this.state.product.filter((product) => product.id < 10)})
   }
